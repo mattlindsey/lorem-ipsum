@@ -5,13 +5,13 @@ class HomeControllerTest < ActionDispatch::IntegrationTest
     get root_path
 
     assert_response :success
-    assert_select "nav.rail a.rail__link", 6
-    assert_select "aside.sidebar a.person", 7
+    assert_select "nav[aria-label=Primaria] a", 6
+    assert_select "aside[aria-label=Conversationes] a", 7
     assert_select "[role=tab]", 3
     assert_select "[role=tab][aria-selected=true]", text: "Lorem"
-    assert_select "article.card", 3
+    assert_select "article", 3
     assert_select "h1", "Lorem ipsum dolor sit amet"
-    assert_select "aside.details"
-    assert_select "footer.footer"
+    assert_select "aside[aria-label=Informatio]"
+    assert_select "footer"
   end
 end
