@@ -27,13 +27,13 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <div class="shell">
-      <div class="shell__panes">
+  <body class="bg-ground font-sans text-sm/normal text-ink">
+    <div class="flex min-h-screen flex-col">
+      <div class="flex flex-auto flex-wrap">
         <%= render "application/rail" %>
         <%= render "application/sidebar" %>
 
-        <main class="main">
+        <main class="flex min-w-0 grow-999 basis-140 flex-col gap-7 bg-surface px-7 pt-4 pb-8">
           <%= yield %>
         </main>
 

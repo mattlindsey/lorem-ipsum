@@ -1,9 +1,14 @@
-<nav class="rail" aria-label="Primaria">
-  <%= link_to icon(:home), root_path, class: "rail__link rail__link--current", aria: { label: "Domus", current: "page" } %>
-  <%= link_to icon(:search), "#", class: "rail__link", aria: { label: "Quaerere" } %>
-  <%= link_to icon(:bell), "#", class: "rail__link", aria: { label: "Nuntii" } %>
-  <%= link_to icon(:document), "#", class: "rail__link", aria: { label: "Documenta" } %>
-  <%= link_to icon(:settings), "#", class: "rail__link", aria: { label: "Optiones" } %>
+<% link_classes = "flex size-11 items-center justify-center rounded-xl" %>
 
-  <%= link_to icon(:user), "#", class: "rail__link rail__link--profile", aria: { label: "Profilum" } %>
+<nav class="flex grow basis-full items-center justify-center gap-2 border-b border-border bg-surface p-2
+            wide:grow-0 wide:basis-16 wide:flex-col wide:justify-start wide:border-r wide:border-b-0 wide:px-0 wide:py-4"
+     aria-label="Primaria">
+  <%= link_to icon(:home), root_path, class: "#{link_classes} bg-accent-tint text-accent", aria: { label: "Domus", current: "page" } %>
+
+  <% { search: "Quaerere", bell: "Nuntii", document: "Documenta", settings: "Optiones" }.each do |name, label| %>
+    <%= link_to icon(name), "#", class: "#{link_classes} text-icon hover:bg-subtle hover:text-ink", aria: { label: label } %>
+  <% end %>
+
+  <%= link_to icon(:user), "#", class: "#{link_classes} ml-auto rounded-full border-[1.5px] border-icon text-icon hover:bg-subtle hover:text-ink wide:mt-auto wide:ml-0",
+        aria: { label: "Profilum" } %>
 </nav>

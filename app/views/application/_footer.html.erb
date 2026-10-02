@@ -1,8 +1,8 @@
-<footer class="footer">
+<footer class="flex flex-wrap items-center justify-between gap-x-5 gap-y-2 border-t border-border bg-surface px-4 py-2 text-xs/normal text-muted">
   <span>&copy; <%= Date.current.year %> Lorem Ipsum &middot; Dolor sit amet</span>
 
-  <nav class="footer__links" aria-label="Leges">
-    <%= link_to "Privatus", "#" %>
-    <%= link_to "Condiciones", "#" %>
+  <nav class="flex gap-5" aria-label="Leges">
+    <%= link_to "Privatus", "#", class: "text-accent hover:text-accent-strong" %>
+    <%= link_to "Condiciones", "#", class: "text-accent hover:text-accent-strong" %>
   </nav>
 </footer>

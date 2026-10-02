@@ -1,5 +1,6 @@
-<aside class="sidebar" aria-label="Conversationes">
-  <button type="button" class="sidebar__picker">
+<aside class="flex grow basis-full flex-col gap-1.5 bg-surface px-4 py-5 wide:max-w-70 wide:basis-60 wide:border-r wide:border-border"
+       aria-label="Conversationes">
+  <button type="button" class="mb-2.5 flex min-h-11 items-center justify-between rounded-lg border border-border bg-subtle px-3.5 font-medium text-ink">
     <span>Lorem ipsum dolor</span>
     <%= icon :chevron_right, size: 16 %>
   </button>
@@ -13,11 +14,11 @@
     [ "Duis Aute", "Irure dolor in reprehenderit" ],
     [ "Velit Esse", "Cillum dolore eu fugiat" ]
   ].each do |name, note| %>
-    <%= link_to "#", class: "person" do %>
-      <span class="avatar"></span>
-      <span class="person__text">
-        <span class="person__name"><%= name %></span>
-        <span class="person__note"><%= note %></span>
+    <%= link_to "#", class: "flex items-center gap-3 rounded-lg p-2 text-ink hover:bg-subtle" do %>
+      <span class="size-9 shrink-0 rounded-full border border-border-strong bg-fill"></span>
+      <span class="flex min-w-0 flex-col">
+        <span class="font-medium"><%= name %></span>
+        <span class="truncate text-[13px] text-muted"><%= note %></span>
       </span>
     <% end %>
   <% end %>

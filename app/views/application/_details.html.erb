@@ -1,25 +1,30 @@
-<aside class="details" aria-label="Informatio">
-  <header class="details__header">
-    <h2>Quis autem vel eum</h2>
-    <p class="muted">Iure reprehenderit qui in ea</p>
+<aside class="flex grow basis-full flex-col gap-5 bg-surface px-5 py-6 wide:max-w-80 wide:basis-70 wide:border-l wide:border-border"
+       aria-label="Informatio">
+  <header class="flex flex-col gap-0.5">
+    <h2 class="text-base font-semibold">Quis autem vel eum</h2>
+    <p class="text-[13px] text-muted">Iure reprehenderit qui in ea</p>
   </header>
 
-  <ul class="checklist">
+  <ul class="flex flex-col gap-3 rounded-xl border border-border px-4 py-3">
     <% [ "Voluptate velit esse", "Quam nihil molestiae", "Consequatur vel illum" ].each do |item| %>
-      <li><span class="checklist__mark"></span><%= item %></li>
+      <li class="flex items-center gap-2.5">
+        <span class="size-4.5 shrink-0 rounded-full border-[1.5px] border-faint"></span><%= item %>
+      </li>
     <% end %>
   </ul>
 
-  <h3>At vero eos</h3>
-  <div class="placeholder" role="img" aria-label="Imago locum tenens">
-    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  <h3 class="font-semibold">At vero eos</h3>
+  <div class="h-30 rounded-md border border-border-strong bg-subtle" role="img" aria-label="Imago locum tenens">
+    <svg class="block size-full fill-none stroke-border-strong" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 0 100 100M100 0 0 100" vector-effect="non-scaling-stroke" />
     </svg>
   </div>
 
-  <ul class="mini-list">
+  <ul class="flex flex-col gap-3">
     <% [ "Accusamus et iusto odio", "Dignissimos ducimus qui", "Blanditiis praesentium" ].each do |item| %>
-      <li><span class="avatar avatar--small"></span><%= item %></li>
+      <li class="flex items-center gap-2.5">
+        <span class="size-5.5 shrink-0 rounded-full border border-border-strong bg-fill"></span><%= item %>
+      </li>
     <% end %>
   </ul>
 </aside>

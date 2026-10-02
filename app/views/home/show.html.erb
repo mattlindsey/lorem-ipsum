@@ -1,46 +1,50 @@
-<div class="tabs" data-controller="tabs">
-  <div class="tabs__list" role="tablist" aria-label="Sectiones">
+<div data-controller="tabs">
+  <div class="grid grid-cols-3 divide-x divide-border overflow-hidden rounded-lg border border-border" role="tablist" aria-label="Sectiones">
     <% %w[ Lorem Ipsum Dolor ].each_with_index do |label, index| %>
-      <%= tag.button label, type: "button", role: "tab", class: "tabs__tab",
+      <%= tag.button label, type: "button", role: "tab",
+            class: "min-h-11 bg-surface font-medium text-icon not-aria-selected:hover:bg-subtle
+                    aria-selected:bg-accent-tint aria-selected:font-semibold aria-selected:text-accent aria-selected:shadow-[inset_0_-2px_0_var(--color-accent)]",
             aria: { selected: index.zero? },
             data: { tabs_target: "tab", action: "tabs#select" } %>
     <% end %>
   </div>
 </div>
 
-<header class="page-header">
-  <h1>Lorem ipsum dolor sit amet</h1>
-  <p class="muted">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+<header class="flex flex-col gap-1">
+  <h1 class="text-[26px] font-semibold tracking-[-0.01em]">Lorem ipsum dolor sit amet</h1>
+  <p class="text-muted">Consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
 </header>
 
-<div class="cards">
+<div class="grid grid-cols-[repeat(auto-fill,minmax(200px,1fr))] gap-5">
   <% [
     [ "Sed ut perspiciatis", "Unde omnis iste natus error sit voluptatem." ],
     [ "Accusantium dolor", "Totam rem aperiam, eaque ipsa quae ab illo." ],
     [ "Inventore veritatis", "Quasi architecto beatae vitae dicta sunt." ]
   ].each do |title, body| %>
-    <article class="card">
-      <div class="card__image"><%= icon :image, size: 32 %></div>
-      <h2><%= title %></h2>
-      <p class="muted"><%= body %></p>
+    <article class="flex flex-col gap-0.5 rounded-xl border border-border p-5">
+      <div class="mb-3 flex h-16 w-21 items-center justify-center rounded-md border border-border-strong bg-subtle text-faint">
+        <%= icon :image, size: 32 %>
+      </div>
+      <h2 class="text-[15px] font-semibold"><%= title %></h2>
+      <p class="text-[13px] text-muted"><%= body %></p>
     </article>
   <% end %>
 </div>
 
-<section class="prose">
-  <h2>Ut enim ad minim veniam</h2>
-  <p>
+<section class="flex flex-col gap-2">
+  <h2 class="text-[17px] font-semibold">Ut enim ad minim veniam</h2>
+  <p class="max-w-[72ch] text-ink-soft">
     Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
     reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
     non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
 </section>
 
-<div class="callout">
-  <span class="avatar avatar--large"></span>
-  <div class="callout__text">
-    <strong>Nemo enim ipsam</strong>
-    <span class="muted">Voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</span>
+<div class="flex flex-wrap items-center gap-5 rounded-xl border border-border px-6 py-5">
+  <span class="size-13 shrink-0 rounded-full border border-border-strong bg-fill"></span>
+  <div class="flex grow basis-65 flex-col gap-0.5">
+    <strong class="font-semibold">Nemo enim ipsam</strong>
+    <span class="text-muted">Voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores.</span>
   </div>
-  <button type="button" class="button">Neque porro</button>
+  <button type="button" class="min-h-11 rounded-lg bg-accent px-5.5 font-medium text-white hover:bg-accent-strong">Neque porro</button>
 </div>

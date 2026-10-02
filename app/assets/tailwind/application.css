@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ground: #eeeeeb;
+  --color-surface: #ffffff;
+  --color-subtle: #f4f4f1;
+  --color-fill: #e3e3de;
+  --color-border: #dcdcd7;
+  --color-border-strong: #cfcfc9;
+  --color-ink: #1c1c1e;
+  --color-ink-soft: #3a3a40;
+  --color-icon: #4a4a50;
+  --color-muted: #5e5e66;
+  --color-faint: #8a8a90;
+  --color-accent: #2f4fb8;
+  --color-accent-strong: #1f3785;
+  --color-accent-tint: #e8ecf8;
+
+  --radius-xl: 0.625rem;
+
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+
+  /* The panes sit side by side above this width and stack below it */
+  --breakpoint-wide: 45rem;
+}
+
+@layer base {
+  button:not(:disabled) { cursor: pointer; }
+}
