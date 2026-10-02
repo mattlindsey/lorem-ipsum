@@ -1,0 +1,24 @@
+<aside class="sidebar" aria-label="Conversationes">
+  <button type="button" class="sidebar__picker">
+    <span>Lorem ipsum dolor</span>
+    <%= icon :chevron_right, size: 16 %>
+  </button>
+
+  <% [
+    [ "Lorem Ipsum", "Dolor sit amet consectetur" ],
+    [ "Adipiscing Elit", "Sed do eiusmod tempor" ],
+    [ "Incididunt Labore", "Ut et dolore magna aliqua" ],
+    [ "Veniam Quis", "Nostrud exercitation ullamco" ],
+    [ "Laboris Nisi", "Aliquip ex ea commodo" ],
+    [ "Duis Aute", "Irure dolor in reprehenderit" ],
+    [ "Velit Esse", "Cillum dolore eu fugiat" ]
+  ].each do |name, note| %>
+    <%= link_to "#", class: "person" do %>
+      <span class="avatar"></span>
+      <span class="person__text">
+        <span class="person__name"><%= name %></span>
+        <span class="person__note"><%= note %></span>
+      </span>
+    <% end %>
+  <% end %>
+</aside>

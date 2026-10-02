@@ -1,0 +1,25 @@
+<aside class="details" aria-label="Informatio">
+  <header class="details__header">
+    <h2>Quis autem vel eum</h2>
+    <p class="muted">Iure reprehenderit qui in ea</p>
+  </header>
+
+  <ul class="checklist">
+    <% [ "Voluptate velit esse", "Quam nihil molestiae", "Consequatur vel illum" ].each do |item| %>
+      <li><span class="checklist__mark"></span><%= item %></li>
+    <% end %>
+  </ul>
+
+  <h3>At vero eos</h3>
+  <div class="placeholder" role="img" aria-label="Imago locum tenens">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0 0 100 100M100 0 0 100" vector-effect="non-scaling-stroke" />
+    </svg>
+  </div>
+
+  <ul class="mini-list">
+    <% [ "Accusamus et iusto odio", "Dignissimos ducimus qui", "Blanditiis praesentium" ].each do |item| %>
+      <li><span class="avatar avatar--small"></span><%= item %></li>
+    <% end %>
+  </ul>
+</aside>

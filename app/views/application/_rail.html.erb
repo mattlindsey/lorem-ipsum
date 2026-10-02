@@ -1,0 +1,9 @@
+<nav class="rail" aria-label="Primaria">
+  <%= link_to icon(:home), root_path, class: "rail__link rail__link--current", aria: { label: "Domus", current: "page" } %>
+  <%= link_to icon(:search), "#", class: "rail__link", aria: { label: "Quaerere" } %>
+  <%= link_to icon(:bell), "#", class: "rail__link", aria: { label: "Nuntii" } %>
+  <%= link_to icon(:document), "#", class: "rail__link", aria: { label: "Documenta" } %>
+  <%= link_to icon(:settings), "#", class: "rail__link", aria: { label: "Optiones" } %>
+
+  <%= link_to icon(:user), "#", class: "rail__link rail__link--profile", aria: { label: "Profilum" } %>
+</nav>
